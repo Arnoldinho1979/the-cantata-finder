@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kantat-O-Mat</title>
+    <title>The Cantata Finder</title>
     <style>
         body {
             font-family: "Times New Roman", serif;
@@ -25,30 +25,30 @@
 </head>
 <body>
 <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Bachfest_Logo.svg" alt="Logo" style="width: 400px; height: auto; margin-top: 10px; margin-bottom: 20px;">
-<h1 style="text-align: center; font-size: 3em; margin-bottom: 0px; width: 100%">Kantat-O-Mat</h1>
-<h2 style="text-align: center; margin-bottom: 19px; width: 100%;">Welche Bach-Kantate passt zu mir?</h2>
+<h1 style="text-align: center; font-size: 3em; margin-bottom: 0px; width: 100%">The Cantata Finder</h1>
+<h2 style="text-align: center; margin-bottom: 19px; width: 100%;">Which Bach cantata suits me?</h2>
 
 <div class="statement" id="question"></div>
 <div class="button-container">
-    <button class="button" onclick="answer(1)">Ja</button>
-    <button class="button" onclick="answer(2)">Nein</button>
-    <button class="button" onclick="answer(3)">Weiß nicht</button>
+    <button class="button" onclick="answer(1)">Yes</button>
+    <button class="button" onclick="answer(2)">No</button>
+    <button class="button" onclick="answer(3)">Not sure</button>
 </div>
 
 <script>
     const statements = [
-        "Ob mit »Lippi« oder mit »Thommy«, egal: Oft erinnere ich mich an die Zeiten, als man noch mit der Familie »Wetten, dass..?« geschaut hat!",
-        "Bei hohen Geräuschen bekomme ich umgehend einen Hörsturz.",
-        "Ausgepustete Eier und morgens um 4.30 Uhr raus: Ich liebe es!",
-        "Ich feiere gerne und oft – und dabei darf es ruhig einmal krachen!",
-        "Gerne denke ich an den Musikunterricht in meiner Grundschulzeit zurück.",
-        "Ich mag es, mich manchmal in meine Traurigkeit fallenzulassen.",
-        "Bevor ich in einem Restaurant esse, schau ich mir die Google-Bewertungen an.",
-        "Ich zähle mich zu den geduldigsten Menschen der Welt.",
-        "»Die Ratten der Lüfte«, dieses Geflatter und Gepicke: Na und? Ich finde Tauben total super!",
-        "Zumindest so ein bisschen spirituell sind wir doch alle, oder?",
-        "Weihnachten ist das einzige Fest, das ich in meinem Leben akzeptiere!",
-        "Leipzig = Stern des Ostens!"
+        "Sometimes I feel like a king!",
+        "High-pitched sounds give me instant hearing loss.",
+        "I’m all about the Easter Bunny – no other rabbit will cut it!",
+        "I love to party – and I’m all for making some noise while I’m at it!",
+        "Sometimes, I find myself whistling a little melody while going about my day.",
+        "Sometimes, I like to let myself fall into my sadness.",
+        "Before I eat at a restaurant, I check the Google reviews.",
+        "I consider myself one of the most patient people in the world.",
+        "I wish the seagulls in Hitchcock's 'The Birds' were pigeons. Because I just love pigeons!",
+        "At least we're all a little bit spiritual, aren't we?",
+        "Christmas is the only holiday I accept in my life!",
+        "Leipzig is the most beautiful city in Eastern Germany."
     ];
 
     const kantaten = {
@@ -938,7 +938,7 @@
     function showResult() {
         let result = determineResult();
         document.getElementById("question").innerHTML = `
-            Am besten passt zu dir die Bach-Kantate ...<br><br>${result.kantate}<br><br>
+            The one that suits me best is...<br><br>${result.kantate}<br><br>
             <iframe width="560" height="315" src="${result.videoUrl}" frameborder="0" allowfullscreen></iframe>
         `;
         document.querySelectorAll("button").forEach(btn => btn.style.display = "none");
